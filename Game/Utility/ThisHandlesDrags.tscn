@@ -3,7 +3,7 @@
 [ext_resource path="res://Utility/Draggy.gd" type="Script" id=1]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 20.0
+radius = 12.0
 
 [node name="Draggy" type="DampedSpringJoint2D"]
 node_a = NodePath("GrabbyPart")
@@ -23,8 +23,10 @@ input_pickable = true
 shape = SubResource( 1 )
 
 [node name="Line2D" type="Line2D" parent="GrabbyPart"]
+visible = false
 scale = Vector2( 4, 4 )
 points = PoolVector2Array( 0, 0, 0, 0.1 )
+width = 6.0
 default_color = Color( 0.698039, 0.0431373, 0.717647, 0.596078 )
 joint_mode = 2
 begin_cap_mode = 2
