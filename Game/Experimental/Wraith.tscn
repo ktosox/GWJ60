@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Experimental/WraithAttackAnimation.tres" type="SpriteFrames" id=1]
+
+[node name="Wraith" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "Down"
+frame = 3
+playing = true
