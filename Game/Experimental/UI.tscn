@@ -31,10 +31,46 @@ tracks/0/keys = {
 "update": 0,
 "values": [ 1.0 ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "Skip"
 length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("../..:printing")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:percent_visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -44,19 +80,22 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="SettingsButton" type="ColorRect" parent="Screen"]
-margin_left = 1191.0
-margin_top = 24.0
-margin_right = 1259.0
-margin_bottom = 81.0
+margin_left = 568.0
+margin_top = 15.0
+margin_right = 619.0
+margin_bottom = 70.0
 
 [node name="TextBox" type="RichTextLabel" parent="Screen"]
-margin_left = 47.0
-margin_top = 566.0
-margin_right = 1241.0
-margin_bottom = 705.0
+margin_left = 20.0
+margin_top = 197.0
+margin_right = 602.0
+margin_bottom = 336.0
 bbcode_enabled = true
+visible_characters = 0
 
 [node name="Print" type="AnimationPlayer" parent="Screen/TextBox"]
 anims/Print = SubResource( 1 )
 anims/RESET = SubResource( 3 )
 anims/Skip = SubResource( 2 )
+
+[connection signal="animation_finished" from="Screen/TextBox/Print" to="." method="_on_Print_animation_finished"]

@@ -3,7 +3,7 @@
 [ext_resource path="res://World/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Various.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/RockStuff/Boulder.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Experimental/Wraith.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Actors/Enemies/Wraith/Wraith.tscn" type="PackedScene" id=4]
 
 [node name="TestLevel" type="YSort"]
 
