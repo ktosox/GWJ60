@@ -145,7 +145,7 @@ script = ExtResource( 3 )
 
 [node name="Shadow" type="Line2D" parent="."]
 modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 0, 15 )
+position = Vector2( 0, -1 )
 points = PoolVector2Array( 6, -7, -6, -7 )
 width = 16.0
 default_color = Color( 0, 0, 0, 0.54902 )
@@ -153,16 +153,18 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="TilesetNatures" type="Sprite" parent="."]
+position = Vector2( 0, -17 )
 texture = ExtResource( 1 )
 region_enabled = true
 region_rect = Rect2( 1, 51, 30, 29 )
 
 [node name="Draggy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, -14 )
 node_b = NodePath("..")
 dragRange = 80.0
 
 [node name="Dust" type="CPUParticles2D" parent="."]
-position = Vector2( 0, 6 )
+position = Vector2( 0, -9 )
 emitting = false
 amount = 15
 lifetime = 0.7
