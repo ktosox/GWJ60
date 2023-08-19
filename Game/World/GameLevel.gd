@@ -1,4 +1,4 @@
-extends RigidBody2D
+extends YSort
 
 
 # Declare member variables here. Examples:
@@ -15,10 +15,3 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_Draggy_dragging(state):
-	if state:
-		$VFX.play("Grab")
-	else:
-		$VFX.play("Drop")
-	pass # Replace with function body.
